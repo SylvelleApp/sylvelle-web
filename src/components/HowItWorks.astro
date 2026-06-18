@@ -1,0 +1,44 @@
+---
+const steps = [
+  {
+    num: '01',
+    title: 'Choose your coaching style',
+    body: 'Pick a persona (Elegant Mentor, Warm Best Friend, Honest Coach, or Calm Wellness Guide) and an intensity from Gentle to Intense. Change any time.',
+  },
+  {
+    num: '02',
+    title: 'Get a daily shelf of micro-tasks',
+    body: 'Each day, Sylvelle surfaces a small, achievable set of concrete tasks chosen by your goals, your gaps, and spaced repetition for skills that take time.',
+  },
+  {
+    num: '03',
+    title: 'Build a living routine',
+    body: 'Lock your favourite tasks into a routine. Forgiving streaks mean one missed day is never a failure — the habit is what counts.',
+  },
+];
+---
+
+<section class="py-20 px-6">
+  <div class="max-w-5xl mx-auto">
+
+    <div class="text-center mb-14">
+      <h2 class="font-heading text-3xl md:text-4xl text-ink mb-3">How it works</h2>
+      <p class="font-body text-ink/60 max-w-md mx-auto">
+        A structured daily loop that adapts to you — not the other way around.
+      </p>
+    </div>
+
+    <div class="space-y-px">
+      {steps.map(({ num, title, body }) => (
+        <div class="flex gap-8 bg-marble border border-linen p-8 hover:border-copper/40 transition-colors">
+          <span class="font-display text-3xl text-copper/30 shrink-0 leading-none pt-1">{num}</span>
+          <div>
+            <h3 class="font-heading text-lg text-ink mb-2">{title}</h3>
+            <p class="font-body text-sm text-ink/60 leading-relaxed">{body}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>

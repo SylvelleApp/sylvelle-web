@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Background -->
+  <rect width="64" height="64" fill="#FBF9F6"/>
+
+  <!-- ── Arch window frame ── -->
+  <!-- Outer frame: straight sides + semicircular arch top -->
+  <path d="M10 60 L10 34 A22 22 0 0 1 54 34 L54 60 Z"
+        fill="none" stroke="#2F2C2A" stroke-width="2.4" stroke-linejoin="miter"/>
+  <!-- Inner frame (inset 4 px) -->
+  <path d="M14 57 L14 34 A18 18 0 0 1 50 34 L50 57 Z"
+        fill="none" stroke="#2F2C2A" stroke-width="1.4" stroke-linejoin="miter"/>
+  <!-- Transom crossbars where arch meets sides -->
+  <line x1="10" y1="34" x2="14" y2="34" stroke="#2F2C2A" stroke-width="1.4"/>
+  <line x1="50" y1="34" x2="54" y2="34" stroke="#2F2C2A" stroke-width="1.4"/>
+  <!-- Bottom inner sill -->
+  <line x1="14" y1="57" x2="50" y2="57" stroke="#2F2C2A" stroke-width="1.4"/>
+
+  <!-- ── Flowing S monogram ── -->
+  <!-- Main S stroke: upper bowl curves left, lower bowl curves right -->
+  <path d="
+    M 40 26
+    C 41 19, 35 15, 28 17
+    C 19 20, 19 30, 28 34
+    C 35 37, 42 41, 41 48
+    C 40 55, 31 58, 23 55
+    C 19 52, 20 47, 24 46
+  " fill="none" stroke="#2F2C2A" stroke-width="3.2"
+    stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Upper-right leaf terminal -->
+  <ellipse cx="41" cy="24" rx="2.8" ry="1.6"
+           fill="#2F2C2A" transform="rotate(-40 41 24)"/>
+
+  <!-- Lower-left leaf terminal -->
+  <ellipse cx="23" cy="48" rx="2.8" ry="1.6"
+           fill="#2F2C2A" transform="rotate(-40 23 48)"/>
+</svg>

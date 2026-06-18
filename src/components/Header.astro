@@ -1,0 +1,46 @@
+---
+const nav = [
+  { label: 'Features', href: '/#features' },
+  { label: 'Download', href: '/#download' },
+  { label: 'Support', href: '/support' },
+  { label: 'FAQ', href: '/faq' },
+];
+---
+
+<header class="sticky top-0 z-50 bg-alabaster/90 backdrop-blur-sm border-b border-linen">
+  <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+    <!-- Logo -->
+    <a href="/" class="font-display text-xl tracking-widest text-ink hover:text-copper transition-colors">
+      Sylvelle
+    </a>
+
+    <!-- Desktop nav -->
+    <nav class="hidden md:flex items-center gap-8">
+      {nav.map(({ label, href }) => (
+        <a
+          href={href}
+          class="font-body text-sm text-ink/70 hover:text-copper transition-colors"
+        >
+          {label}
+        </a>
+      ))}
+    </nav>
+
+    <!-- Mobile menu toggle (pure CSS) -->
+    <label for="mobile-menu" class="md:hidden cursor-pointer p-2">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-ink" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </label>
+  </div>
+
+  <!-- Mobile nav -->
+  <input type="checkbox" id="mobile-menu" class="peer hidden" />
+  <nav class="hidden peer-checked:block md:hidden border-t border-linen bg-alabaster px-6 py-4 space-y-3">
+    {nav.map(({ label, href }) => (
+      <a href={href} class="block font-body text-sm text-ink/70 hover:text-copper transition-colors py-1">
+        {label}
+      </a>
+    ))}
+  </nav>
+</header>

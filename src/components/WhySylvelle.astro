@@ -1,0 +1,43 @@
+---
+const reasons = [
+  {
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />`,
+    label: 'Private by design',
+    body: 'No account, no server, no analytics. Everything is AES-256 encrypted on your device — a lock, a key, and nothing else.',
+  },
+  {
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />`,
+    label: 'Free forever',
+    body: 'No subscriptions, no paywalls, no microtransactions. Donations are welcome but never required.',
+  },
+  {
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M18.364 5.636a9 9 0 010 12.728M15.536 8.464a5 5 0 010 7.072M6.343 6.343a8 8 0 000 11.314" />`,
+    label: 'Offline first',
+    body: 'Sylvelle works with zero internet. Your data is yours — no cloud dependency, ever.',
+  },
+];
+---
+
+<section class="py-20 px-6 bg-marble border-y border-linen">
+  <div class="max-w-5xl mx-auto">
+
+    <div class="text-center mb-14">
+      <h2 class="font-heading text-3xl md:text-4xl text-ink mb-3">Why Sylvelle?</h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {reasons.map(({ icon, label, body }) => (
+        <div class="text-center">
+          <div class="flex justify-center mb-4">
+            <div class="w-12 h-12 rounded-full border border-linen flex items-center justify-center bg-alabaster">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-copper" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" set:html={icon} />
+            </div>
+          </div>
+          <h3 class="font-heading text-lg text-ink mb-2">{label}</h3>
+          <p class="font-body text-sm text-ink/60 leading-relaxed">{body}</p>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>

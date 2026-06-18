@@ -1,0 +1,36 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+  note?: string;
+  href: string;
+  label: string;
+  icon: string;
+}
+
+const { title, description, note, href, label, icon } = Astro.props;
+---
+
+<div class="bg-marble border border-linen p-8 flex flex-col gap-4 hover:border-copper/40 transition-colors">
+  <div class="flex items-center gap-3">
+    <div class="w-10 h-10 border border-linen flex items-center justify-center bg-alabaster shrink-0">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-copper" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" set:html={icon} />
+    </div>
+    <h3 class="font-heading text-lg text-ink">{title}</h3>
+  </div>
+
+  <p class="font-body text-sm text-ink/60 leading-relaxed flex-1">{description}</p>
+
+  {note && (
+    <p class="font-body text-xs text-ink/40 italic border-l-2 border-linen pl-3">{note}</p>
+  )}
+
+  <a
+    href={href}
+    target="_blank"
+    rel="noopener noreferrer"
+    class="inline-block border border-copper text-copper font-body text-sm font-medium px-6 py-2.5 text-center hover:bg-copper/10 transition-colors"
+  >
+    {label}
+  </a>
+</div>

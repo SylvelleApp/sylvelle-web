@@ -1,0 +1,31 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Hero from '../components/Hero.astro';
+import Pillars from '../components/Pillars.astro';
+import HowItWorks from '../components/HowItWorks.astro';
+import WhySylvelle from '../components/WhySylvelle.astro';
+import Downloads from '../components/Downloads.astro';
+import Waitlist from '../components/Waitlist.astro';
+---
+
+<Layout>
+  <Header />
+  <main>
+    <Hero />
+    <Pillars />
+    <HowItWorks />
+    <WhySylvelle />
+    <Downloads />
+    <Waitlist />
+
+    <!-- Creator note -->
+    <section class="py-12 px-6 text-center">
+      <p class="font-body text-sm text-ink/40 italic">
+        Built by a woman who wanted this to exist.
+      </p>
+    </section>
+  </main>
+  <Footer />
+</Layout>
